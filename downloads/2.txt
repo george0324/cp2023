@@ -1,0 +1,41 @@
+#include  
+這行程式碼包含標準輸入/輸出函式庫，這是使用 printf 函式所需的。
+
+/* 
+   Variables to store the width and height of a rectangle in inches 
+變數用來儲存矩形的寬度和高度（單位：英寸）
+*/
+int width;
+寬度變數          
+int height;
+高度變數         
+
+int area;           /* Variable to store the area of the rectangle */
+變數用來儲存矩形的面積
+int perimeter;      /* Variable to store the perimeter of the rectangle */
+變數用來儲存矩形的周長
+
+int main() {
+    /* Assigning values to height and width */
+給寬度和高度變數賦值 
+	height = 7;
+付值高度為7英寸
+	width = 5;
+付值寬度為5英寸
+
+    /* Calculating the perimeter of the rectangle */
+計算矩形的周長
+    perimeter = 2*(height + width);
+	printf("Perimeter of the rectangle = %d inches\n", perimeter);
+使用公式計算周長
+	
+    /* Calculating the area of the rectangle */
+計算矩形的面積
+	area = height * width;
+使用公式計算面積
+	printf("Area of the rectangle = %d square inches\n", area);
+
+
+    return(0);
+返回0，表示程式已經成功執行。
+}
