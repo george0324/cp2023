@@ -1,0 +1,23 @@
+int main() {
+   int radius;      /* Variable to store the radius of the circle */
+變數用來儲存圓的半徑
+   float area, perimeter;    /* Variables to store the area and perimeter of the circle */ 
+變數用來儲存圓的面積和周長
+   radius = 6;      /* Assigning a value to the radius */  
+給半徑賦值    
+   /* Calculating the perimeter of the circle */
+計算圓的周長
+   perimeter = 2 * 3.14 * radius;
+ 使用公式計算周長
+   printf("Perimeter of the Circle =37.680000 inches", perimeter);
+圓的周長 = 37.680000 英寸\n
+   /* Calculating the area of the circle */
+計算圓的面積
+   area = 3.14 * radius * radius;
+使用公式計算面積
+   printf("Area of the Circle = 113.040001 square inches", area);
+
+圓的面積 = 113.040001 平方英寸\n
+   return(0);
+返回0，表示程式已經成功執行
+}
