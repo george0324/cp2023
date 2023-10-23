@@ -1,8 +1,14 @@
 #include <stdio.h> 
- int main()  
+這一行程式碼包含標準輸入/輸出函式庫，這是使用 printf 等函式所需的。
+ int main() 
+這是C程式的主要函式，它是程式執行的起點 
   {
      printf("Name   : Alexandra Abramov\n"); 
+這行程式碼使用 printf 函式將字串 "Name : Alexandra Abramov" 顯示在螢幕上。\n 字元代表換行，因此在列印後移至下一行。
      printf("DOB    : July 14, 1975\n"); 
+類似前一行，這行列印出生日期。
      printf("Mobile : 99-9999999999\n"); 
+這行列印手機號碼。
      return(0); 
+這行程式碼返回數值0，表示程式已經成功執行。在C語言中，返回值為0通常表示成功執行。
   }
