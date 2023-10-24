@@ -1,0 +1,22 @@
+#include <stdio.h>
+float temp_f;     /* degrees fahrenheit */
+華氏度
+float temp_c;     /* degrees centigrade */
+攝氏度
+char line_text[50];        /* a line of input */
+一行輸入
+
+int main() {
+  printf("Input a temperature (in Centigrade):");
+輸入溫度（攝氏度）
+  fgets(line_text, sizeof(line_text), stdin);
+從使用者獲得一行輸入
+  sscanf(line_text, "%f", &temp_c);
+將使用者輸入的內容轉換為浮點數，並存入 temp_c 變數
+
+  temp_f = ((9.0 / 5.0) * temp_c) + 32.0;
+使用轉換公式將攝氏度轉換為華氏度
+  printf("%f degrees Fahrenheit.\n", temp_f);
+輸出轉換後的華氏度
+  return(0);
+}
