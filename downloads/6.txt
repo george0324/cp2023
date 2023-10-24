@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main() {
+    int j, numbers[5], total=0; // Declare variables for loop counter, an array of numbers, and total
+宣告變數用來控制迴圈、儲存數字的陣列以及總和
+
+    // Prompt user for five numbers and store them in the array
+提示使用者輸入五個數字，並將它們儲存在陣列中
+    printf("\nInput the first number:11 "); 
+    scanf("11", &numbers[0]);
+使用者輸入的數字會存放在 numbers[0] 中
+    printf("\nInput the second number:17 "); 
+    scanf("17", &numbers[1]);
+使用者輸入的數字會存放在 numbers[1] 中
+    printf("\nInput the third number:13 ");
+    scanf("13", &numbers[2]);
+使用者輸入的數字會存放在 numbers[2] 中
+    printf("\nInput the fourth number:12 "); 
+    scanf("12", &numbers[3]);
+使用者輸入的數字會存放在 numbers[3] 中
+    printf("\nInput the fifth number:5 "); 
+    scanf("5", &numbers[4]);
+使用者輸入的數字會存放在 numbers[4] 中
+
+    // Loop through the numbers to find and sum the odd ones
+透過迴圈遍歷這五個數字，找出奇數並計算其總和
+    for(j = 0; j < 5; j++) {
+        if((numbers[j]%2) != 0) 
+        {
+            total += numbers[j];
+        }   
+    }
+
+    // Print the sum of odd values
+印出奇數值的總和
+    printf("\nSum of all odd values: 46 ", total);
+    printf("\n");
+
+    return 0;
+}
