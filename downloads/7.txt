@@ -1,0 +1,42 @@
+#include <stdio.h>:
+
+這行程式碼包含了標準C庫的stdio.h標頭文件，這個文件包含了輸入和輸出相關的函數，例如 printf。
+#include <time.h>:
+
+這行程式碼包含了標準C庫的time.h標頭文件，這個文件包含了時間相關的函數和數據類型。
+int main(void):
+
+這是主函數的開始，C程式的執行從這個函數開始。它返回一個整數，void 表示不接受任何參數。
+time_t now;:
+
+這行宣告了一個 time_t 型別的變數 now，用來存儲當前的時間。
+time(&now);:
+
+這行使用 time 函數來獲取當前的時間，並將其存儲在 now 變數中。
+struct tm beg_month;:
+
+這行宣告了一個 tm 結構體變數 beg_month，用來表示時間的結構體。tm 是C語言中用於表示日期和時間的結構體。
+beg_month = *localtime(&now);:
+
+這行使用 localtime 函數將當前時間 now 轉換為本地時間格式，並將結果存儲在 beg_month 結構體中。 * 運算符用於解引用結構體指針。
+beg_month.tm_hour = 0;:
+
+這行設置 beg_month 結構體的小時部分為0，表示將時間設定為午夜。
+beg_month.tm_min = 0;:
+
+這行設置 beg_month 結構體的分鐘部分為0。
+beg_month.tm_sec = 0;:
+
+這行設置 beg_month 結構體的秒部分為0。
+beg_month.tm_mday = 1;:
+
+這行設置 beg_month 結構體的月份的日期部分為1，表示設定為當月的第一天。
+double seconds = difftime(now, mktime(&beg_month));:
+
+這行使用 difftime 函數計算當前時間 now 與設定的 beg_month 時間之間的秒數差。mktime 函數將 beg_month 結構體轉換為 time_t 型別。
+printf("\n %.f seconds passed since the beginning of the month.\n\n", seconds);:
+
+這行使用 printf 函數將計算得到的秒數輸出到標準輸出。秒數差值以浮點數格式輸出，並顯示 "seconds passed since the beginning of the month" 的文字。
+return 0;:
+
+這行表示主函數的結束，並返回0，這意味著程式執行成功。
