@@ -1,0 +1,33 @@
+#include <stdio.h>:
+
+這行程式碼包含了一個標準C庫的標頭文件，stdio.h，這個文件包含了用於輸入和輸出的函數，例如 printf 和 scanf。
+float kmph;:
+
+這行宣告了一個名為 kmph 的浮點數變數，用來存儲公里每小時的數值。
+float miph;:
+
+這行宣告了一個名為 miph 的浮點數變數，用來存儲計算出來的英里每小時的數值。
+char line_text[50];:
+
+這行宣告了一個名為 line_text 的字符數組（字串），用來暫時存儲從鍵盤輸入的數據。這個數組可以最多存儲50個字符。
+int main():
+
+這是主函數的開始，C程式的執行從這個函數開始。它返回一個整數，代表程式的退出狀態。
+printf("Input kilometers per hour: ");:
+
+這行使用 printf 函數在終端上輸出提示信息，要求用戶輸入公里每小時的數值。
+fgets(line_text, sizeof(line_text), stdin);:
+
+這行使用 fgets 函數從標準輸入（stdin）讀取一行文字，並將其存儲在 line_text 數組中。 sizeof(line_text) 用於確保不超過 line_text 數組的大小。
+sscanf(line_text, "%f", &kmph);:
+
+這行使用 sscanf 函數從 line_text 中解析浮點數，並將其存儲在 kmph 變數中。這樣，用戶輸入的公里每小時數值被轉換為浮點數型別，以便進行計算。
+miph = (kmph * 0.6213712);:
+
+這行計算英里每小時的數值，將公里每小時的數值乘以轉換因子 0.6213712（1公里等於0.6213712英里）。
+printf("%f miles per hour\n", miph);:
+
+這行使用 printf 函數輸出計算得到的英里每小時數值，以浮點數格式輸出，並附帶 "miles per hour" 的文字。
+return(0);:
+
+這行表示主函數的結束，並返回0，這意味著程式執行成功。
