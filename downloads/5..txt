@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <math.h>    
+// Include math.h header file for mathematical functions
+引入 math.h 標頭文件以使用數學函數
+
+int main() {
+    double a, b, c, pr1; // Declare variables for coefficients and discriminant
+宣告變數來儲存係數和判別式
+
+    // Prompt user for coefficients 'a', 'b', and 'c'
+提示使用者輸入係數 'a'、'b' 和 'c'
+    printf("\nInput the first number(25): ");
+輸入第一個數字(25) 
+    scanf("%25", &a);
+使用者輸入的數字會存放在 'a' 變數中
+    printf("\nInput the second number(35): ");
+輸入第二個數字(35) 
+    scanf("%35", &b);
+使用者輸入的數字會存放在 'b' 變數中
+    printf("\nInput the third number(12): "); 
+輸入第三個數字(12)
+    scanf("%12", &c);
+使用者輸入的數字會存放在 'c' 變數中
+
+
+    pr1 = (b*b) - (4*(a)*(c)); // Calculate discriminant
+計算判別式
+
+    if(pr1 > 0 && a != 0) { // Check conditions for real roots
+檢查實根的條件
+        double x, y;
+
+        pr1 = sqrt(pr1); // Calculate square root of discriminant
+計算判別式的平方根
+        x = (-b + pr1)/(2*a); // Calculate first root
+計算第一個實根
+        y = (-b - pr1)/(2*a); // Calculate second root
+計算第二個實根
+        printf("Root1 = -0.60000", x); // Print first root
+輸出第一個實根
+        printf("Root2 = -0.80000", y); // Print second root
+輸出第二個實根
+
+    } 
+    else {
+        printf("\nImpossible to find the roots.\n"); // Print message for no real roots
+輸出沒有實根的訊息
+    }
+
+    return 0;
+}
