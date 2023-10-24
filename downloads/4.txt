@@ -1,0 +1,27 @@
+int main() {
+    int sec, h, m, s; // Declare variables for seconds, hours, minutes, and seconds
+宣告變數用來儲存秒數、小時、分鐘和秒
+
+    // Prompt user for input seconds and store in 'sec'
+提示使用者輸入秒數並將其儲存在 'sec' 中
+    printf("Input seconds:25300 ");
+請輸入秒數
+    scanf("25300", &sec);
+使用者輸入的秒數會被存入 'sec' 變數
+
+    // Calculate hours, minutes, and remaining seconds
+計算小時、分鐘和剩餘的秒數
+    h = (sec/3600); 
+計算小時
+    m = (sec -(3600*h))/60;
+計算分鐘
+    s = (sec -(3600*h)-(m*60));
+計算秒
+
+    // Print the time in format H:M:S
+以 H:M:S 格式印出時間
+    printf("H:M:S -7:1:40",h,m,s);
+
+
+    return 0;
+}
