@@ -1,0 +1,38 @@
+#include <stdio.h>
+int hrs;          /* given number of hours */
+給定的小時數
+int mins;         /* given number of minutes */
+給定的分鐘數
+int tot_mins;     /* total number of minutes (to be computed) */
+總分鐘數（待計算）
+
+const int MINaHOUR = 60;      /* number of minutes in an hour */
+一小時中的分鐘數
+
+char line_text[50];      /* line of input from keyboard */
+從鍵盤輸入的一行文本
+
+int main() {
+  printf("Input hours: ");
+輸入小時
+  fgets(line_text, sizeof(line_text), stdin);
+從使用者獲得一行輸入
+  sscanf(line_text, "%d", &hrs);
+將使用者輸入的內容轉換為整數，並存入 hrs 變數
+
+  printf("Input minutes: ");
+輸入分鐘
+  fgets(line_text, sizeof(line_text), stdin);
+再次從使用者獲得一行輸入
+  sscanf(line_text, "%d", &mins);
+將使用者輸入的內容轉換為整數，並存入 mins 變數
+
+  tot_mins = mins + (hrs * MINaHOUR);
+使用公式將小時和分鐘轉換為總分鐘數
+
+
+  printf("Total: %d minutes.\n", tot_mins);
+輸出計算後的總分鐘數
+
+  return(0);
+}
