@@ -150,7 +150,8 @@ img.add_border {
 <p>不知在程式有關彈簧函數打錯造成彈簧沒有完成頭尾也沒有連起來。</p>
 <p><img alt="" height="419" src="./../images/w16.png" width="559"/></p>
 <p>第二次嘗試</p>
-<p></p>
+<p>保留原本最左邊跟最右邊的水平線的寫法，然後中間上下畫的斜線 我用一個迴圈指定要上下跑的次數(看zigzag()的最後一個參數count)，然後在指定好每次x y座標的變動量（dx, dy)，在指定一個起始座標（curX, curY)<br/>最後在每一次回圈開始的時候 先指定好目的座標（desX, desY），然後就根據設定好的變動量倍率去畫線(只有第一條根最後一條斜線是一倍 其他都是兩倍)</p>
+<p><img alt="" height="361" src="./../images/test.png" width="482"/></p>
 <p><a href="./../downloads/w16-1.c">w16-1.c</a></p>
 <script>
 var winkVideoData_41023131 = {
